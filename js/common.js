@@ -21,17 +21,22 @@ $(function(){
 
 	/*******首页********/
 	$(".btn_play").on("click",function(){
-		ACT.track("0");
-		ACT.login(function(type, key){
-			console.log("开始游戏按钮");
-			$(document).scrollTop(0);
-			$(".wrap_hp").hide();
-			$(".wrap_game").show();
-			//$("#loading").text("100%");
-			gameInit();
-			_music = new Slam.Music("sounds/bgm.mp3");
-			//$(".wrap_over").show();
-		});
+		// ACT.track("0");
+		$(document).scrollTop(0);
+		$(".wrap_hp").hide();
+		$(".wrap_game").show();
+		gameInit();
+		_music = new Slam.Music("sounds/bgm.mp3");
+		// ACT.login(function(type, key){
+		// 	console.log("开始游戏按钮");
+		// 	$(document).scrollTop(0);
+		// 	$(".wrap_hp").hide();
+		// 	$(".wrap_game").show();
+		// 	//$("#loading").text("100%");
+		// 	gameInit();
+		// 	_music = new Slam.Music("sounds/bgm.mp3");
+		// 	//$(".wrap_over").show();
+		// });
 	});
 	$(".btn_rules").on("click",function(){
 		$(".page_rules").show();
