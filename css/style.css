@@ -1,0 +1,126 @@
+*:focus{outline:none;}
+*{ margin:0; padding:0;}
+body,h1,h2,h3,h4,h5,h6,ul,li,ol,div,dl,dt,dd,p,img,a,form,table,tr,td,input,select,textarea{ margin:0; padding:0; color:#000; font-size:24px; font-family:"微软雅黑"; outline:none;}
+body{font-size:12px; -webkit-text-size-adjust:none; position: relative;}
+img{vertical-align:middle; border:0 none;}
+li{list-style:none; list-style-position:outside;}
+a{color:#000; text-decoration:none; overflow:hidden; outline:none;/**/width: 100%; height: 100%; display: block;}
+ul{list-style:none; overflow:hidden;}
+html,body{overflow:hidden;/*overflow-y:auto;*/width: 100%;/* height: 100%*/}
+
+
+
+/*新闻750*1206*/
+.wrap_news{width:100%; position:relative; /*display: none;*//**/ }
+.wrap_news img{width: 100%}
+
+
+/*首页750*1206*/
+.wrap_hp{width: 100%; position: relative; display: block;}
+.wrap_hp img{width: 100%;}
+.slogan{position: absolute; width: 85.33%; left:4.7%; top: 27.5%;}
+.btn_play{position: absolute; width: 61.06%; left: 18.8%; top: 52.7%;}
+.btn_rules{position: absolute; width: 30.66%; left: 35.1%; top: 61.6%;}
+.page_rules{position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 10; background-color:rgba(0,0,0,0.7); display: none;}
+.rules_bg{position: absolute; width: 89.6%; left: 2.1%; top: 11.4%;}
+.btn_cls{position: absolute;width: 4.13%; left: 88.5%; top: 31.5%; z-index: 1;}
+.rulesBox{position: absolute; width: 66.22%; height: 43%; left: 21%; top: 35%; overflow: scroll;}
+
+/*游戏页*/
+.wrap_game{width: 100%; position: relative; display: none; height: 100%; overflow: hidden;}
+.wrap_game img{width: 100%}
+
+/*结束页面*/
+.wrap_over{position: relative; width: 100%; display: none;}
+.wrap_over img{width: 100%;}
+.result_bg{position: absolute; width: 97.33%; left: 1.3%; /*top: 11.2%;*/ bottom: 0;display: none; pointer-events:none;}/*730*/
+.result_bg img{pointer-events:none;}
+.scroll_text{position: absolute; width: 100%; text-align: center; top: 20%; color: #FFFFFF; font-size: 33px;}
+.prize_pic{position: absolute; width: 55.47%; left: 23%; top: 30%;}
+.prize_text{position: absolute;width: 29.19%; left: 56%; top: 28%; z-index: 2;}
+.btn_lottery{position: absolute; width: 63.01%; left: 19%; top: 52%; pointer-events:auto;}
+.btn_replay{position: absolute; width: 62.19%; left: 18%; top: 64%;pointer-events:auto;}
+.btn_buy{position: absolute; width: 62.19%; left: 18%; top: 71%;pointer-events:auto;}
+.btn_share{position: absolute; width: 62.19%; left: 18%; top: 78%;pointer-events:auto;}
+.shareBox{position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: rgba(0,0,0,0.7); display: none;}
+.share_pic{position: absolute; width: 61.56%; left: 35%; top: 2%;}
+
+.lotteryBox1{position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: rgba(0,0,0,0.7); z-index: 10; display: none;}
+.lottery_bg1{position: absolute; width: 81.33%; left: 9.3%; top: 23.3%;}
+.lottery_text1{position: absolute; width: 36.29%; left: 33%; top: 18%;}
+.btn_lottery1{position: absolute; width: 74.42%; left: 11%; top: 79%;}
+.lottery_cls1{position: absolute;width: 4.13%; left: 83%; top: 28%; z-index: 1;}
+
+.lotteryBox2{position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: rgba(0,0,0,0.7); z-index: 10; display: none;}
+.lottery_bg2{position: absolute; width: 81.33%; left: 9.3%; top: 23.3%;}
+.lottery_text2{position: absolute; width: 52.78%; left: 24%; top: 18%;}
+.btn_lottery2{position: absolute; width: 74.42%; left: 11%; top: 79%;}
+.lottery_cls2{position: absolute;width: 4.13%; left: 83%; top: 28%; z-index: 1;}
+
+
+.lotteryBox3{position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: rgba(0,0,0,0.7); z-index: 10; display: none;}
+.lottery_bg3{position: absolute; width: 81.33%; left: 9.3%; top: 23.3%;}
+.lottery_text3_1{position: absolute; width: 55.24%; left: 23%; top: 18%; display: none;}
+.lottery_text3_2{position: absolute; width: 61.34%; left: 20%; top: 14%; display: none;}
+.btn_lottery3{position: absolute; width: 74.42%; left: 11%; top: 79%;}
+.lottery_cls3{position: absolute;width: 4.13%; left: 83%; top: 28%; z-index: 1;}
+
+.lotteryBox4{position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: rgba(0,0,0,0.7); z-index: 10; display: none;}
+.lottery_bg4{position: absolute; width: 81.33%; left: 9.3%; top: 23.3%;}
+.lottery_text4{position: absolute; width: 74.09%; left: 12%; top: 15%;}
+.code{position: absolute; width: 51.46%; left: 25%; top: 28%; z-index: 9;}
+.lottery_cls4{position: absolute;width: 4.13%; left: 83%; top: 28%; z-index: 1;}
+
+
+
+
+
+.username{position: absolute; left: 28%; top: 42.5%; width:55%; height: 9%;line-height:31px; border:none; background-color:transparent; color:white; font-size:18px;}
+.phone{position: absolute; left: 28%; top: 55.5%; width:55%; height: 9%;line-height:31px; border:none; background-color:transparent; color:white; font-size:18px;}
+.add{position: absolute; left: 28%; top: 68.5%; width:55%; height: 9%;line-height:31px; border:none; background-color:transparent; color:white; font-size:18px;}
+
+/*得分框动画*/
+.inUp {animation:inUp 1s linear 0ms normal forwards;-webkit-animation:inUp 1s linear 0ms normal forwards;}
+@keyframes inUp {
+	
+    0% {transform: translate(0%, 100%)}
+	50%{transform: translate(0%, 50%)}
+    100% {transform: translate(0%, 0%)}
+}
+@-webkit-keyframes inUp {
+	
+    0% {-webkit-transform: translate(0%, 100%)}
+	50%{-webkit-transform: translate(0%, 50%)}
+    100% {-webkit-transform: translate(0%, 0%)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
