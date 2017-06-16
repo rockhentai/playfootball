@@ -1,0 +1,142 @@
+@charset "utf-8";
+body,div,p,ul,ol,dl,dt,dd,li,form,input,table,th,td,img,h1,h2,h3,h4,h5,h6 { margin: 0;padding: 0;}
+body { font-size: 12px; font-style: normal; font-family:'Microsoft Yahei','微软雅黑','Simsun','宋体','Arial', 'sans-serif'; overflow:hide}
+
+
+#loading {font: normal 12px arial,serif; position: absolute; color: #FFFFFF; text-align: center; width: 100%; top: 52%;}
+#slam { width: 100%}
+#score {position:absolute; width:20%; height:5%; left:0px; top:0px; font: normal 24pt Georgia,serif;}
+#help {position:absolute; width:40%; height:5%; left:20%; top:0px; font: normal 24pt Georgia,serif;}
+
+
+
+#surface {position:absolute; width:100%; left: 0;top: 0; height: 15.2%;}/*183*/
+.logo {position:absolute; width: 24.26% ;left:2%; top:8.19%}
+.score {position:absolute; width: 21.86%;left: 76.3%; top:7%;}
+.score .number{position:absolute;width: 100%;z-index:2; left:0%; top:13%; font-size:14pt; text-align: center;}
+.caption {text-align:center; width: 100%;position: absolute; left: 0%; top: 34.97%;}
+.caption img{width: 49.06%}
+.btn_mus{position: absolute;width: 7.73%; left: 90%; top: 59%;}
+.btn_mus_off{position: absolute;width: 7.73%; left: 90%; top: 59%;display: none;}
+
+.loadingBox{position: absolute;width: 100%; height: 100%; left: 0;top: 0; background-color: #000000; z-index: 99;}
+.loading_ball{position: absolute; width: 15.2%; left: 42.84%; top: 40%;}
+
+
+.dash {position:absolute; left:50%; bottom:30%;pointer-events: none;}
+.dash .indicator {position:absolute; z-index:1;margin: -94px 0 0 -7px;}
+.dash .dial {position:absolute; z-index:2; margin: -131px 0 0 -128px;}
+.dash .circle {position:absolute; z-index:3; margin: -6px 0 0 -6px;}
+.dash .motion{
+	transform-origin:center 94px;
+	-moz-transform-origin:center 94px;
+	-webkit-transform-origin:center 94px;
+	-o-transform-origin:center 94px;
+	animation:	swing 2s infinite linear alternate both paused;
+	-moz-animation:	swing 2s infinite linear alternate both paused;
+	-webkit-animation:	swing 2s infinite linear alternate both paused;
+	-o-animation:	swing 2s infinite linear alternate both paused;
+}
+
+.power {position:absolute; left:70%; bottom:30%; pointer-events: none;}
+.power .bar {position:absolute; z-index:1;background: url('../images/bar.jpg') repeat-y; width:21px; height:240px; margin: -250px 0 0 11px;}
+.power .bar .charge {position:relative; bottom:0; height:50%; background: url('../images/bar.jpg') repeat-y;vertical-align:middle;}
+.power .track {position:absolute; z-index:2; margin: -258px 0 0 0;}
+.power .mark {position:absolute; z-index:3; margin: -200px 0 0 2px;}
+.power .motion{
+	transform-origin:center bottom;
+	-moz-transform-origin:center bottom;
+	-webkit-transform-origin:center bottom;
+	-o-transform-origin:center bottom;
+	animation:	lift 2s infinite linear alternate both paused;
+	-moz-animation:	lift 2s infinite linear alternate both paused;
+	-webkit-animation:	lift 2s infinite linear alternate both paused;
+	-o-animation:	lift 2s infinite linear alternate both paused;
+}
+
+.cutScene {position:absolute;z-index:3; width:0;height:0; left:50%; top:-20%}
+.cutScene .container{position:relative;}
+.cutScene .word {position:absolute; left:-179px}
+.cutScene .number {position:absolute; left:189px}
+
+.trans {
+	transition: top 2s cubic-bezier(0.43, 1.36, 0.87, 1.4);
+	-moz-transition: top 2s cubic-bezier(0.43, 1.36, 0.87, 1.4);
+	-webkit-transition: top 2s cubic-bezier(0.43, 1.36, 0.87, 1.4);
+	-o-transition: top 2s cubic-bezier(0.43, 1.36, 0.87, 1.4);
+}
+.popShow {
+	animation:	moveTopMiddle 2s cubic-bezier(0.43, 1.36, 0.87, 1.4) both;
+	-moz-animation:	moveTopMiddle 2s cubic-bezier(0.43, 1.36, 0.87, 1.4) both;
+	-webkit-animation:	moveTopMiddle 2s cubic-bezier(0.43, 1.36, 0.87, 1.4) both;
+	-o-animation:	moveTopMiddle 2s cubic-bezier(0.43, 1.36, 0.87, 1.4) both;
+}
+
+@keyframes moveTopMiddle
+{
+from {top: 0%;}
+to {top: 50%;}
+}
+@-webkit-keyframes moveTopMiddle
+{
+from {top: 0%;}
+to {top: 50%;}
+}
+@keyframes moveMiddleTop
+{
+from {top: 50%;}
+to {top: 0%;}
+}
+@-webkit-keyframes moveMiddleTop
+{
+from {top: 50%;}
+to {top: 0%;}
+}
+
+
+@keyframes swing
+{
+	from {transform: rotate(-90deg);}
+	to{transform: rotate(90deg);}
+}
+@-webkit-keyframes swing
+{
+	from {-webkit-transform: rotate(-90deg);}
+	to{-webkit-transform: rotate(90deg);}
+}
+
+@keyframes lift
+{
+	from {transform: scale(1, 0);}
+	to{transform: scale(1, 1);}
+}
+@-webkit-keyframes lift
+{
+	from {-webkit-transform: scale(1, 0);}
+	to{-webkit-transform: scale(1, 1);}
+}
+
+
+
+/*篮球动画*/
+.amf_ball {animation:amf_ball 1s linear 0ms normal infinite;-webkit-animation:amf_ball 1s linear 0ms normal infinite;}
+@keyframes amf_ball {
+	
+    0% {transform: translate(0%, 0%)}
+    30%{transform: translate(0%, -85%)}
+    40%{transform: translate(0%, -95%)}
+	50%{transform: translate(0%, -100%)}
+	60%{transform: translate(0%, -95%)}
+	70%{transform: translate(0%, -85%)}
+    100% {transform: translate(0%, 0%)}
+}
+@-webkit-keyframes amf_ball {
+	
+    0% {-webkit-transform: translate(0%, 0%)}
+    30%{-webkit-transform: translate(0%, -85%)}
+    40%{-webkit-transform: translate(0%, -95%)}
+	50%{-webkit-transform: translate(0%, -100%)}
+	60%{-webkit-transform: translate(0%, -95%)}
+	70%{-webkit-transform: translate(0%, -85%)}
+    100% {-webkit-transform: translate(0%, 0%)}
+}
