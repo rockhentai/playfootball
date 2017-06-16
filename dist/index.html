@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta content="telephone=no" name="format-detection">
+  <title>零感时刻 至薄隐形</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/libs/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src='./js/h5e.new.test.js' id='h5e-node' arg='{"appid": "997667278"}'></script>
+  <script src="js/project.js?v6"></script>
+  <script src="js/libs/preloadjs-0.6.2.min.js"></script>
+  <script src="js/libs/soundjs-0.6.2.min.js"></script>
+  <script src="js/libs/three.min.js"></script>
+  <script src="js/libs/MTLLoader.js"></script>
+  <script src="js/libs/OBJLoader.js"></script>
+  <script src="js/libs/OrbitControls.js"></script>
+  <script src="js/libs/ColladaLoader.js"></script>
+  <script src="js/libs/ammo.js"></script>
+  <script src="js/libs/Tween.js"></script>
+  <script src="js/libs/stats.min.js"></script>
+  <script src="js/libs/Model.class.js"></script>
+  <script src="js/Slam.class.js"></script>
+  <script src="js/common.js?v5"></script>
+  <script type='text/javascript' src='http://js.aq.qq.com/js/aq_common.js'></script>
+</head>
+
+<body>
+  <div class="wrap_hp">
+    <img src="images/bg3_01.jpg" alt="">
+    <img src="images/bg3_02.jpg" alt="">
+    <img src="images/bg3_03.jpg" alt="">
+    <img src="images/bg3_04.jpg" alt="">
+    <img src="images/bg3_05.jpg" alt="">
+    <div class="slogan">
+      <img src="images/slogan.png" alt="">
+    </div>
+    <div class="btn_play">
+      <img src="images/btn_play.png" alt="">
+    </div>
+    <div class="btn_rules">
+      <img src="images/btn_rules.png" alt="">
+    </div>
+    <div class="page_rules">
+      <div class="btn_cls">
+        <img src="images/btn_cls.png" alt="">
+      </div>
+      <div class="rules_bg">
+        <img src="images/rules_bg.png" alt="">
+        <div class="rulesBox">
+          <img src="images/rules_text.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap_game">
+    <div class="loadingBox">
+      <div id="loading"></div>
+      <div class="loading_ball amf_ball">
+        <img src="images/loading_ball.png" alt="">
+      </div>
+    </div>
+    <div id="surface">
+      <div class="logo"><img src="images/logo.png" /></div>
+      <div class="score"><img src="images/score.png" />
+        <div class="number">0</div>
+      </div>
+      <div class="caption" style="display:none">
+        <img src="images/stage1.png" />
+        <img src="images/stage2.png" />
+        <img src="images/stage3.png" />
+      </div>
+      <div class="btn_mus">
+        <img src="images/btn_mus.png" alt="">
+      </div>
+      <div class="btn_mus_off">
+        <img src="images/btn_mus_off.png" alt="">
+      </div>
+    </div>
+    <canvas id="slam" width="750" height="1334"></canvas>
+    <div class="result_bg inUp">
+      <img src="images/result_bg.png" alt="">
+      <p class="scroll_text">本次得分：50分</p>
+      <div class="prize_pic">
+        <img src="images/prize_pic1.png" alt="">
+      </div>
+      <div class="prize_text">
+        <img src="images/prize_text.png" alt="">
+      </div>
+      <div class="btn_lottery">
+        <img src="images/btn_lottery.png" alt="">
+      </div>
+      <div class="btn_replay">
+        <a href="javascript:;" onclick="ACT.track('2');setTimeout(function(){window.location.href='./index.html';},200)">
+          <img src="images/btn_replay.png" alt="">
+        </a>
+      </div>
+      <div class="btn_buy">
+        <a href="https://item.m.jd.com/product/11927004155.html" target="_blank">
+          <img src="images/btn_buy.png" alt="">
+        </a>
+      </div>
+      <div class="btn_share">
+        <img src="images/btn_share.png" alt="">
+      </div>
+    </div>
+    <div class="shareBox">
+      <div class="share_pic">
+        <img src="images/share_pic.png" alt="">
+      </div>
+    </div>
+    <div class="lotteryBox1">
+      <div class="lottery_cls1">
+        <img src="images/btn_cls.png" alt="">
+      </div>
+      <div class="lottery_bg1">
+        <img src="images/lottery_bg.png" alt="">
+        <div class="lottery_text1">
+          <img src="images/lottery_text1.png" alt="">
+        </div>
+        <div class="btn_lottery1">
+          <a href="javascript:;" onclick="ACT.track('2');setTimeout(function(){window.location.href='./index.html';},200)">
+            <img src="images/btn_lottery1.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="lotteryBox2">
+      <div class="lottery_cls2">
+        <img src="images/btn_cls.png" alt="">
+      </div>
+      <div class="lottery_bg2">
+        <img src="images/lottery_bg.png" alt="">
+        <div class="lottery_text2">
+          <img src="images/lottery_text2.png" alt="">
+        </div>
+        <div class="btn_lottery2">
+          <a href="javascript:;" onclick="ACT.track('2');setTimeout(function(){window.location.href='./index.html';},200)">
+            <img src="images/btn_lottery1.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="lotteryBox3">
+      <div class="lottery_cls3">
+        <img src="images/btn_cls.png" alt="">
+      </div>
+      <div class="lottery_bg3">
+        <img src="images/lottery_bg2.png" alt="">
+        <div class="lottery_text3_1 ltText">
+          <img src="images/lottery_text3_1.png" alt="">
+        </div>
+        <div class="lottery_text3_2 ltText">
+          <img src="images/lottery_text3_2.png" alt="">
+        </div>
+        <input type="" name="" class="username" value="" maxlength="10">
+        <input type="" name="" class="phone" value="" maxlength="11">
+        <input type="" name="" class="add" value="" maxlength="80">
+        <div class="btn_lottery3">
+          <img src="images/btn_confirm.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="lotteryBox4">
+      <div class="lottery_cls4">
+        <img src="images/btn_cls.png" alt="">
+      </div>
+      <div class="lottery_bg4">
+        <img src="images/lottery_bg.png" alt="">
+        <div class="lottery_text4">
+          <img src="images/lottery_text4.png" alt="">
+        </div>
+        <div class="code">
+          <img src="images/code.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
